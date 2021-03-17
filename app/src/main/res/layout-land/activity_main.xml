@@ -6,33 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/dunyaKilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:ems="10"
+        android:hint="Dünyada Kaç Kilosun?"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saturn" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="220dp"
+        android:layout_width="542dp"
+        android:layout_height="140dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/saturn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+         />
 
     <CheckBox
         android:id="@+id/saturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Satürn"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mars"
         app:layout_constraintEnd_toStartOf="@+id/mars"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mars" />
 
     <CheckBox
         android:id="@+id/mars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="16dp"
         android:text="Mars"
         app:layout_constraintEnd_toStartOf="@+id/jupiter"
         app:layout_constraintHorizontal_bias="0.5"
@@ -44,57 +54,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jüpiter"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/mars" />
-
-    <EditText
-        android:id="@+id/dunyaKilo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="Dünyada Kaç Kilosun?"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        android:inputType="number|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jupiter"
-        android:background="@drawable/edittextbackground"/>
+        app:layout_constraintStart_toEndOf="@+id/mars"
+        app:layout_constraintTop_toTopOf="@+id/mars" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="271dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="266dp"
+        android:layout_height="44dp"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toEndOf="@+id/dunyaKilo"
+        app:layout_constraintTop_toBottomOf="@+id/mars" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="414dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="408dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dunyaKilo">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
             android:id="@+id/uranus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="Uranüs" />
 
@@ -102,7 +93,7 @@
             android:id="@+id/venus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="Venüs" />
 
@@ -110,9 +101,10 @@
             android:id="@+id/neptun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="Neptün" />
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
