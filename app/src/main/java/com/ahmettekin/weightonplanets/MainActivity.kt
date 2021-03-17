@@ -125,13 +125,13 @@ class MainActivity : AppCompatActivity(), CompoundButton.OnCheckedChangeListener
 
         when (this.id) {
             R.id.neptun -> textView.text =
-                "Neptün'deki kilonuz: ${String.format("%.2f", dunyaKilo * 2.33)}"
+                "Neptün'deki kilonuz: ${String.format("%.2f", dunyaKilo * 1.12)}"
 
             R.id.uranus -> textView.text =
-                "Uranüs'teki kilonuz: ${String.format("%.2f", dunyaKilo * 0.377)}"
+                "Uranüs'teki kilonuz: ${String.format("%.2f", dunyaKilo * 0.89)}"
 
             R.id.venus -> textView.text =
-                "Venüs'deki kilonuz: ${String.format("%.2f", dunyaKilo * 0.982)}"
+                "Venüs'deki kilonuz: ${String.format("%.2f", dunyaKilo * 0.9)}"
         }
     }
 
